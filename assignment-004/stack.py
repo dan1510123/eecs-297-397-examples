@@ -13,7 +13,7 @@ class Stack:
         """
         if item == None:
             raise TypeError("Stack will not store an object of NoneType.")
-        self.__stack_items.append(item)
+        self._stack_items.append(item)
 
     def pop(self):
         """
@@ -21,8 +21,8 @@ class Stack:
         item that was added to the stack and return it.
         Otherwise, return None.
         """
-        if self.__stack_items:
-            return self.__stack_items.pop()
+        if self._stack_items:
+            return self._stack_items.pop()
         else:
             return None
 
@@ -31,8 +31,8 @@ class Stack:
         If the stack contains at least one item, return the value of last
         item that was added to the stack. Otherwise, return None.
         """
-        if self.__stack_items:
-            return self.__stack_items[-1]
+        if self._stack_items:
+            return self._stack_items[-1]
         else:
             return None
 
@@ -40,4 +40,4 @@ class Stack:
         """
         Return the number of items in the stack.
         """
-        return len(self.__stack_items)
+        return len(self._stack_items)
